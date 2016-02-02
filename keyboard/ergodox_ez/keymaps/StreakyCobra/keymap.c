@@ -28,13 +28,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|Media |           | VolDn|------+------+------+------+------+--------|
  * | LShift |[/Ctrl|   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |/ ctrl|\ shift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   |      |  Z   |      |  Alt | LGui |                                       | AltGr| Alt  |      |      |   =   |
+ *   |      |  Z   |      |      |  Alt |                                       | AltGr| Alt  |      |      |   =   |
  *   `----------------------------------'                                       `-----------------------------------'
  *                                       ,--------------.       ,-------------.
  *                                       |  Esc  | NumL |       | Home | End  |
  *                                ,------+-------+------|       |------+------+------.
- *                                |      |       |      |       |      |      |      |
- *                                |BackSp|  Del  |------|       |------|Enter |Space |
+ *                                | LGui | Alt   |      |       |      |      |      |
+ *                                |BackSp| Del   |------|       |------|Enter |Space |
  *                                |ace   |       |  `   |       |RAL(S)|      |      |
  *                                `---------------------'       `--------------------'
  */
@@ -44,11 +44,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TAB,         KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   TG(SYMB),
         MO(SYMB),       KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
         KC_LSFT, CTL_T(KC_LBRC),      KC_X,   KC_C,   KC_V,   KC_B,   TG(MDIA),
-        KC_TRNS,        KC_Z,      KC_TRNS, KC_LALT, KC_LGUI,
+        KC_TRNS,        KC_Z,      KC_TRNS, KC_TRNS, KC_LALT,
 
                                                       KC_ESC,  KC_NLCK,
                                                                KC_TRNS,
-                                             KC_BSPC,KC_DELT,  KC_GRV,
+                              GUI_T(KC_BSPC), ALT_T(KC_DELT),  KC_GRV,
 
         // right hand
              KC_MPLY,     KC_6,   KC_7,    KC_8,    KC_9,    KC_0,     KC_MINS,
