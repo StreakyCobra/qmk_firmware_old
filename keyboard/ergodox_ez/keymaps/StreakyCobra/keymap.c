@@ -35,12 +35,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                                ,------+-------+------|       |------+------+------.
  *                                | LGui | Alt   |      |       |      |      |      |
  *                                |BackSp| Del   |------|       |------|Enter |Space |
- *                                |ace   |       |  `   |       |RAL(S)|      |      |
+ *                                |ace   |       | Esc  |       |RAL(S)|      |      |
  *                                `---------------------'       `--------------------'
  */
 [BASE] = KEYMAP(
 
-        KC_ESC, KC_1, KC_2, KC_3, KC_4, KC_5, TG(NUMR),
+        KC_GRV, KC_1, KC_2, KC_3, KC_4, KC_5, TG(NUMR),
         KC_TAB,         KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   TG(SYMB),
         MO(SYMB),       KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
         KC_LSFT, CTL_T(KC_LBRC),      KC_X,   KC_C,   KC_V,   KC_B,   TG(MDIA),
@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
                                                       KC_ESC,  KC_NLCK,
                                                                KC_TRNS,
-                              GUI_T(KC_BSPC), ALT_T(KC_DELT),  KC_GRV,
+                              GUI_T(KC_BSPC), ALT_T(KC_DELT),  KC_ESC,
 
         // right hand
              KC_MPLY,     KC_6,   KC_7,    KC_8,    KC_9,    KC_0,     KC_MINS,
