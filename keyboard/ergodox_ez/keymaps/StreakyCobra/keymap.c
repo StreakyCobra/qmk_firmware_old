@@ -136,8 +136,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                KC_TRNS,
                                KC_SPC,KC_ENT,KC_TRNS,
        // right hand
-       KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,
-       KC_TRNS, KC_TRNS, KC_HOME, KC_PGUP, KC_WH_U,    LCTL(KC_S), KC_TRNS,
+       KC_TRNS, KC_F6  , KC_F7  , KC_F8  , KC_F9  ,    KC_F10    , KC_F11,
+       KC_TRNS, KC_TRNS, KC_HOME, KC_PGUP, KC_WH_U,    LCTL(KC_S), KC_F12,
                 KC_LEFT, KC_DOWN,   KC_UP, KC_RGHT,    KC_PLUS, KC_TRNS,
        KC_TRNS, KC_TRNS,  KC_END, KC_PGDN, KC_WH_D,    LCTL(KC_I), KC_TRNS,
                          KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_TRNS,
@@ -219,7 +219,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
 };
 
 // Runs just one time when the keyboard initializes.
-void * matrix_init_user(void) {
+void matrix_init_user(void) {
   // Turn off
   ergodox_board_led_off();
   ergodox_right_led_1_off();
@@ -241,7 +241,7 @@ void * matrix_init_user(void) {
 };
 
 // Runs constantly in the background, in a loop.
-void * matrix_scan_user(void) {
+void matrix_scan_user(void) {
 
     ergodox_board_led_off();
     ergodox_right_led_1_off();
